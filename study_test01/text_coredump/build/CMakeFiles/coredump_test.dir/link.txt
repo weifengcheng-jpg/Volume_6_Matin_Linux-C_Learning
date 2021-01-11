@@ -1,0 +1,1 @@
+/usr/bin/c++   -rdynamic -O3 -fPIC -ggdb -std=c++11 -Wall -Wno-deprecated -Wno-builtin-macro-redefined -Wno-deprecated-declarations  -rdynamic CMakeFiles/coredump_test.dir/tests/coredump_test.cc.o  -o bin/coredump_test 

@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/working/Volume_6_Matin_Linux-C_Learning/study_test01/text_coredump/tests/demo_log1.cc
+stdio.h
+-
+signal.h
+-
+execinfo.h
+-
+stdlib.h
+-
+

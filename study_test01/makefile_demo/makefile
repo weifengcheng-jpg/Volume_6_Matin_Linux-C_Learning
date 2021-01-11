@@ -1,13 +1,11 @@
-hello_demo : hellospeak.o speak.o
-	gcc -o hello_demo hellospeak.o speak.o
 
-hellospeak.o : hellospeak.c speak.h
-	gcc -c hellospeak.c
+objects = hellospeak.o speak.o
+hello_demo : $(objects)
+	gcc -o -g hello_demo $(objects)
 
-speak.o : speak.c  speak.h
-	gcc -c speak.c
+$(objects):speak.h
 
-clean :
-	rm hello_demo speak.o hellospeak.o
-
+.PHONY:clean
+clean:
+	-rm hello_demo $(objects)
 
