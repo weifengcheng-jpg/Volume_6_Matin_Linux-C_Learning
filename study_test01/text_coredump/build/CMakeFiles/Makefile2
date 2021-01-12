@@ -63,6 +63,43 @@ CMAKE_SOURCE_DIR = /home/working/Volume_6_Matin_Linux-C_Learning/study_test01/te
 CMAKE_BINARY_DIR = /home/working/Volume_6_Matin_Linux-C_Learning/study_test01/text_coredump/build
 
 #=============================================================================
+# Target rules for target CMakeFiles/memcheck_tests.dir
+
+# All Build rule for target.
+CMakeFiles/memcheck_tests.dir/all:
+	$(MAKE) -f CMakeFiles/memcheck_tests.dir/build.make CMakeFiles/memcheck_tests.dir/depend
+	$(MAKE) -f CMakeFiles/memcheck_tests.dir/build.make CMakeFiles/memcheck_tests.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/working/Volume_6_Matin_Linux-C_Learning/study_test01/text_coredump/build/CMakeFiles --progress-num=7,8 "Built target memcheck_tests"
+.PHONY : CMakeFiles/memcheck_tests.dir/all
+
+# Include target in all.
+all: CMakeFiles/memcheck_tests.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/memcheck_tests.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/working/Volume_6_Matin_Linux-C_Learning/study_test01/text_coredump/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/memcheck_tests.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/working/Volume_6_Matin_Linux-C_Learning/study_test01/text_coredump/build/CMakeFiles 0
+.PHONY : CMakeFiles/memcheck_tests.dir/rule
+
+# Convenience name for target.
+memcheck_tests: CMakeFiles/memcheck_tests.dir/rule
+
+.PHONY : memcheck_tests
+
+# clean rule for target.
+CMakeFiles/memcheck_tests.dir/clean:
+	$(MAKE) -f CMakeFiles/memcheck_tests.dir/build.make CMakeFiles/memcheck_tests.dir/clean
+.PHONY : CMakeFiles/memcheck_tests.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/memcheck_tests.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/demo_log1.dir
 
 # All Build rule for target.

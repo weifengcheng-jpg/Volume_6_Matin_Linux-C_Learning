@@ -59,17 +59,6 @@ CMAKE_BINARY_DIR = /home/working/Volume_6_Matin_Linux-C_Learning/study_test01/te
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
@@ -80,6 +69,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -112,6 +112,19 @@ preinstall/fast:
 depend:
 	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+#=============================================================================
+# Target rules for targets named memcheck_tests
+
+# Build rule for target.
+memcheck_tests: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 memcheck_tests
+.PHONY : memcheck_tests
+
+# fast build rule for target.
+memcheck_tests/fast:
+	$(MAKE) -f CMakeFiles/memcheck_tests.dir/build.make CMakeFiles/memcheck_tests.dir/build
+.PHONY : memcheck_tests/fast
 
 #=============================================================================
 # Target rules for targets named demo_log1
@@ -233,14 +246,42 @@ tests/demo_log1.cc.s:
 	$(MAKE) -f CMakeFiles/demo_log1.dir/build.make CMakeFiles/demo_log1.dir/tests/demo_log1.cc.s
 .PHONY : tests/demo_log1.cc.s
 
+tests/memcheck_tests.o: tests/memcheck_tests.cc.o
+
+.PHONY : tests/memcheck_tests.o
+
+# target to build an object file
+tests/memcheck_tests.cc.o:
+	$(MAKE) -f CMakeFiles/memcheck_tests.dir/build.make CMakeFiles/memcheck_tests.dir/tests/memcheck_tests.cc.o
+.PHONY : tests/memcheck_tests.cc.o
+
+tests/memcheck_tests.i: tests/memcheck_tests.cc.i
+
+.PHONY : tests/memcheck_tests.i
+
+# target to preprocess a source file
+tests/memcheck_tests.cc.i:
+	$(MAKE) -f CMakeFiles/memcheck_tests.dir/build.make CMakeFiles/memcheck_tests.dir/tests/memcheck_tests.cc.i
+.PHONY : tests/memcheck_tests.cc.i
+
+tests/memcheck_tests.s: tests/memcheck_tests.cc.s
+
+.PHONY : tests/memcheck_tests.s
+
+# target to generate assembly for a file
+tests/memcheck_tests.cc.s:
+	$(MAKE) -f CMakeFiles/memcheck_tests.dir/build.make CMakeFiles/memcheck_tests.dir/tests/memcheck_tests.cc.s
+.PHONY : tests/memcheck_tests.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... rebuild_cache"
+	@echo "... memcheck_tests"
 	@echo "... demo_log1"
 	@echo "... cmake_test"
 	@echo "... coredump_test"
@@ -253,6 +294,9 @@ help:
 	@echo "... tests/demo_log1.o"
 	@echo "... tests/demo_log1.i"
 	@echo "... tests/demo_log1.s"
+	@echo "... tests/memcheck_tests.o"
+	@echo "... tests/memcheck_tests.i"
+	@echo "... tests/memcheck_tests.s"
 .PHONY : help
 
 

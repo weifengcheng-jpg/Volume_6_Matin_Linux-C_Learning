@@ -43,6 +43,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/memcheck_tests.dir/DependInfo.cmake"
   "CMakeFiles/demo_log1.dir/DependInfo.cmake"
   "CMakeFiles/cmake_test.dir/DependInfo.cmake"
   "CMakeFiles/coredump_test.dir/DependInfo.cmake"

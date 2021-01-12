@@ -12,6 +12,7 @@ add_executable(coredump_test ./tests/coredump_test.cc)
 
 add_executable(demo_log1 ./tests/demo_log1.cc)
 
+add_executable(memcheck_tests ./tests/memcheck_tests.cc)
 
 SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/build/bin)
 SET(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/build/lib)
