@@ -1,0 +1,2 @@
+/usr/bin/ar qc libcommon.a  CMakeFiles/common.dir/iniconfig.cc.o
+/usr/bin/ranlib libcommon.a

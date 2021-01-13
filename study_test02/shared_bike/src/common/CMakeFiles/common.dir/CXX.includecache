@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../third/include/iniparser/dictionary.h
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+unistd.h
+-
+
+../third/include/iniparser/iniparser.h
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+dictionary.h
+../third/include/iniparser/dictionary.h
+
+/home/working/Volume_6_Matin_Linux-C_Learning/study_test02/shared_bike/src/common/configdef.h
+string
+-
+
+/home/working/Volume_6_Matin_Linux-C_Learning/study_test02/shared_bike/src/common/iniconfig.cc
+iniconfig.h
+/home/working/Volume_6_Matin_Linux-C_Learning/study_test02/shared_bike/src/common/iniconfig.h
+iniparser/iniparser.h
+-
+
+/home/working/Volume_6_Matin_Linux-C_Learning/study_test02/shared_bike/src/common/iniconfig.h
+iostream
+-
+string
+-
+configdef.h
+/home/working/Volume_6_Matin_Linux-C_Learning/study_test02/shared_bike/src/common/configdef.h
+

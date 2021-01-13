@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+./common/configdef.h
+string
+-
+
+./common/iniconfig.h
+iostream
+-
+string
+-
+configdef.h
+./common/configdef.h
+
+/home/working/Volume_6_Matin_Linux-C_Learning/study_test02/shared_bike/src/main.cpp
+iniconfig.h
+/home/working/Volume_6_Matin_Linux-C_Learning/study_test02/shared_bike/src/iniconfig.h
+configdef.h
+/home/working/Volume_6_Matin_Linux-C_Learning/study_test02/shared_bike/src/configdef.h
+
