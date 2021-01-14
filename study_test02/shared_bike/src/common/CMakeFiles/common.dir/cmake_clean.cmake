@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/common.dir/Logger.cc.o"
   "CMakeFiles/common.dir/iniconfig.cc.o"
   "libcommon.pdb"
   "libcommon.a"

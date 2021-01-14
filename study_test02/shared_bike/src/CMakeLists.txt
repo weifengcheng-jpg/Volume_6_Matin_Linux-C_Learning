@@ -7,6 +7,7 @@ include_directories(./common)
 
 link_directories(../third/lib/iniparser)
 link_directories(./common)
+link_directories(../third/lib/log4cpp)
 
 aux_source_directory(${PROJECT_SOURCE_DIR} SOURCE_FILES)
 
@@ -17,6 +18,9 @@ set(CMAKE_CXX_FLAGS "$ENV{CXXFLAGS} -rdynamic -O0 -ggdb -std=c++11 -Wall -Wno-de
 
 target_link_libraries(shared_bike iniparser)
 target_link_libraries(shared_bike common)
+#target_link_libraries(shared_bike log4cpp)
+target_link_libraries(${PROJECT_NAME} liblog4cpp.a)
+target_link_libraries(shared_bike pthread)
 
 add_subdirectory(common)
 

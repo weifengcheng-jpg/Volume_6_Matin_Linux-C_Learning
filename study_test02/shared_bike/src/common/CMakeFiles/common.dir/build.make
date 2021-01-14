@@ -60,9 +60,22 @@ include common/CMakeFiles/common.dir/progress.make
 # Include the compile flags for this target's objects.
 include common/CMakeFiles/common.dir/flags.make
 
+common/CMakeFiles/common.dir/Logger.cc.o: common/CMakeFiles/common.dir/flags.make
+common/CMakeFiles/common.dir/Logger.cc.o: common/Logger.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/working/Volume_6_Matin_Linux-C_Learning/study_test02/shared_bike/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object common/CMakeFiles/common.dir/Logger.cc.o"
+	cd /home/working/Volume_6_Matin_Linux-C_Learning/study_test02/shared_bike/src/common && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/common.dir/Logger.cc.o -c /home/working/Volume_6_Matin_Linux-C_Learning/study_test02/shared_bike/src/common/Logger.cc
+
+common/CMakeFiles/common.dir/Logger.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/common.dir/Logger.cc.i"
+	cd /home/working/Volume_6_Matin_Linux-C_Learning/study_test02/shared_bike/src/common && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/working/Volume_6_Matin_Linux-C_Learning/study_test02/shared_bike/src/common/Logger.cc > CMakeFiles/common.dir/Logger.cc.i
+
+common/CMakeFiles/common.dir/Logger.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/common.dir/Logger.cc.s"
+	cd /home/working/Volume_6_Matin_Linux-C_Learning/study_test02/shared_bike/src/common && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/working/Volume_6_Matin_Linux-C_Learning/study_test02/shared_bike/src/common/Logger.cc -o CMakeFiles/common.dir/Logger.cc.s
+
 common/CMakeFiles/common.dir/iniconfig.cc.o: common/CMakeFiles/common.dir/flags.make
 common/CMakeFiles/common.dir/iniconfig.cc.o: common/iniconfig.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/working/Volume_6_Matin_Linux-C_Learning/study_test02/shared_bike/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object common/CMakeFiles/common.dir/iniconfig.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/working/Volume_6_Matin_Linux-C_Learning/study_test02/shared_bike/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object common/CMakeFiles/common.dir/iniconfig.cc.o"
 	cd /home/working/Volume_6_Matin_Linux-C_Learning/study_test02/shared_bike/src/common && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/common.dir/iniconfig.cc.o -c /home/working/Volume_6_Matin_Linux-C_Learning/study_test02/shared_bike/src/common/iniconfig.cc
 
 common/CMakeFiles/common.dir/iniconfig.cc.i: cmake_force
@@ -75,15 +88,17 @@ common/CMakeFiles/common.dir/iniconfig.cc.s: cmake_force
 
 # Object files for target common
 common_OBJECTS = \
+"CMakeFiles/common.dir/Logger.cc.o" \
 "CMakeFiles/common.dir/iniconfig.cc.o"
 
 # External object files for target common
 common_EXTERNAL_OBJECTS =
 
+common/libcommon.a: common/CMakeFiles/common.dir/Logger.cc.o
 common/libcommon.a: common/CMakeFiles/common.dir/iniconfig.cc.o
 common/libcommon.a: common/CMakeFiles/common.dir/build.make
 common/libcommon.a: common/CMakeFiles/common.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/working/Volume_6_Matin_Linux-C_Learning/study_test02/shared_bike/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libcommon.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/working/Volume_6_Matin_Linux-C_Learning/study_test02/shared_bike/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libcommon.a"
 	cd /home/working/Volume_6_Matin_Linux-C_Learning/study_test02/shared_bike/src/common && $(CMAKE_COMMAND) -P CMakeFiles/common.dir/cmake_clean_target.cmake
 	cd /home/working/Volume_6_Matin_Linux-C_Learning/study_test02/shared_bike/src/common && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/common.dir/link.txt --verbose=$(VERBOSE)
 
